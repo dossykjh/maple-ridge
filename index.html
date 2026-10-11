@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#bcd0dc">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" href="icon-192.png">
+<title>Maple Ridge</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #bcd0dc; overflow: hidden; touch-action: none; overscroll-behavior: none; }
+  #stage { position: fixed; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; transform-origin: 0 0; touch-action: none; }
+  #game { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+  #ui { position: absolute; inset: 0; }
+  /* boot screen until three.js + Rapier have loaded and the region is generated */
+  #loading { position: absolute; inset: 0; z-index: 20; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+    background: linear-gradient(180deg, #a9c8e0 0%, #e8dcc4 58%, #e19a4a 100%); color: #3a3732;
+    font: 700 18px/1.3 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif; transition: opacity .6s; }
+  #loading b { font-size: 34px; letter-spacing: .04em; }
+  #loading small { font-weight: 600; opacity: .7; }
+  #loading.done { opacity: 0; pointer-events: none; }
+</style>
+<script>(function(){var V='840cc5187f';window.__BUILD=V;if(!/github\.io$/.test(location.hostname))return;try{fetch('version.txt?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.text():''}).then(function(t){t=(t||'').trim();if(!t||t===V)return;var k='mr-reload-'+t;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');var u=new URL(location.href);u.searchParams.set('v',t);location.replace(u.toString())}).catch(function(){})}catch(e){}})();</script>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Maple Ridge">
+<meta name="application-name" content="Maple Ridge">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="Maple Ridge">
+<meta property="og:description" content="단풍 든 호숫가 숲을 4×4 로 천천히 달리는 힐링 오프로드">
+</head>
+<body>
+<div id="stage">
+  <canvas id="game"></canvas>
+  <div id="ui">
+    <div id="loading"><b>Maple Ridge</b><span class="msg">숲길을 준비하는 중…</span><small>단풍 능선 오프로드</small></div>
+  </div>
+</div>
+<script>window.__LB_BASE = new URL('assets/', location.href).href; window.__LB_ASSET_V = {"models/birch.glb":"43c8b1b249","models/body.glb":"60774ea2a3","models/bridge.glb":"91a190d34d","models/campfire.glb":"587780bc09","models/crate.glb":"b37e589f17","models/grass.glb":"bf39258ccc","models/larch.glb":"cd91d9b305","models/rock.glb":"21aba32bd8","models/spruce.glb":"755470a465","models/statue.glb":"ed780d93a3","models/tent.glb":"82994cc21f","models/wheel.glb":"ac37940231"};</script>
+<script type="module" src="app.js?v=73204e26f1"></script>
+</body>
+</html>

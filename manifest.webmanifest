@@ -1,0 +1,26 @@
+{
+ "name": "Maple Ridge",
+ "short_name": "Maple Ridge",
+ "lang": "ko",
+ "description": "단풍 든 호숫가 숲을 4×4 로 천천히 달리는 힐링 오프로드",
+ "start_url": "./",
+ "scope": "./",
+ "display": "fullscreen",
+ "orientation": "landscape",
+ "background_color": "#e8dcc4",
+ "theme_color": "#bcd0dc",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any maskable"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}
